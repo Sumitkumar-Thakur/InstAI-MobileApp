@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Aora",
-    "scheme": "aora",
-    "slug": "aora",
+    "name": "InstAl",
+    "scheme": "instAl",
+    "slug": "instAl",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
