@@ -45,7 +45,6 @@ const Welcome = () => {
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
             Exploration with InstAl
           </Text>
-
           <CustomButton
             title="Continue with Email"
             handlePress={() => router.push("/sign-in")}
