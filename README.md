@@ -3,11 +3,13 @@
 Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite,
 this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community.
 
-## <a name="Screenshots">🤖 Screenshots</a>
+## <a name="Screenshots">📷 Screenshots</a>
 
-![Screenshot 1](assets/Screenshot_20240505_034249.jpg)
-![Screenshot 2](assets/Screenshot_20240505_034301.jpg)
-![Screenshot 3](assets/Screenshot_20240505_034313.jpg)
+<div align="center">
+    <img src="assets/Screenshot_20240505_034249.jpg" alt="Screenshot 1" width="200"/>
+    <img src="assets/Screenshot_20240505_034301.jpg" alt="Screenshot 2" width="200"/>
+    <img src="assets/Screenshot_20240505_034313.jpg" alt="Screenshot 3" width="200"/>
+</div>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
