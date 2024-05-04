@@ -6,20 +6,40 @@ import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 import { images } from "../../constants";
 import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
+import { getCurrentUser, signIn } from "../../lib/appwrite";
+import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignIn = () => {
+  const { setUser, user, setIsLogged } = useGlobalContext();
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
+  if (user) {
+    router.replace("/home");
+  }
   const submit = async () => {
     if (form.email === "" || form.password === "") {
       Alert.alert("Error", "Please fill in all fields");
     }
 
     setSubmitting(true);
+
+    try {
+      await signIn(form.email, form.password);
+      const result = await getCurrentUser();
+      setUser(result);
+      setIsLogged(true);
+
+      Alert.alert("Success", "User signed in successfully");
+      router.replace("/home");
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +58,7 @@ const SignIn = () => {
           />
 
           <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Log in to Aora
+            Log in to InstAI
           </Text>
 
           <FormField
